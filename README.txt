@@ -1,1 +1,1 @@
-Estudos Livro Java.
+Studies of the book Java Rodrigo Turini, initiated day 19/05. Only creation of the repository for registration, updates at the end.
