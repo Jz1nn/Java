@@ -1,0 +1,45 @@
+package br.com.john.library.products;
+
+import br.com.john.library.Publisher;
+
+public class Magazine implements Product, Promotional {
+	
+	private String nome;
+	private String descricao;
+	private double valor;
+	private Publisher editora;
+	
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public String getDescricao() {
+		return descricao;
+	}
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+	public double getValor() {
+		return valor;
+	}
+	public void setValor(double valor) {
+		this.valor = valor;
+	}
+	public Publisher getEditora() {
+		return editora;
+	}
+	public void setEditora(Publisher editora) {
+		this.editora = editora;
+	}
+	
+	public boolean aplicaDescontoDe(double porcentagem) {
+		if (porcentagem > 0.1) {
+			return false;
+		}
+		double desconto = getValor() * porcentagem;
+		setValor(getValor() - desconto);
+		return true;
+	}
+}

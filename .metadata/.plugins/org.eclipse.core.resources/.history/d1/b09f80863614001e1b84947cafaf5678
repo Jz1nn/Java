@@ -1,0 +1,30 @@
+package br.com.john.library.test;
+
+import br.com.john.library.Author;
+
+public class DiscountRules {
+	public static void main(String[] args) {
+		
+		Author autor = new Author();
+		autor.setName("John Willian");
+		
+		Book livro = new MiniBook(autor);
+		livro.setPrice(39.90);
+		
+		
+		if (!livro.applyDiscountOf(0.3)) {
+			System.out.println("Desconto no livro nao pode ser maior do que 30%");
+		} else {
+			System.out.println("Price do livro com discount: " + livro.getPrice());
+		}
+		
+		Ebook ebook = new Ebook(autor);
+		ebook.setPrice(29.90);
+		
+		if (!ebook.applyDiscountOf(0.15)) {
+			System.out.println("Desconto no ebook nao pode ser maior do que 15%");
+		} else {
+			System.out.println("Price do ebook com discount: " + ebook.getPrice());
+		}
+	}
+}

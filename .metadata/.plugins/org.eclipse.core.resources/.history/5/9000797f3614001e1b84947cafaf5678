@@ -1,0 +1,19 @@
+package br.com.john.library.products;
+
+import br.com.john.library.Author;
+
+public class MiniLivro extends Book {
+
+	public MiniLivro(Author autor) {
+		super(autor);
+	}
+	
+	@Override
+	public boolean applyDiscountOf(double percentage) {
+		return false;
+	}
+
+	public double getPrice() {
+		return getPrice();
+	}
+}

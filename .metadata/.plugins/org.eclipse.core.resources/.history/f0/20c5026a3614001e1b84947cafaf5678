@@ -1,0 +1,24 @@
+package br.com.john.library.products;
+
+import br.com.john.library.Author;
+
+public class PhysicalBook extends Book implements Promotional {
+
+	public PhysicalBook(Author autor) {
+		super(autor);
+	}
+	
+	public double getTaxaImpressao() {
+		return this.getPrice() * 0.05;
+	}
+	
+	public boolean applyDiscountOf(double porcentagem) {
+		if (porcentagem > 0.3) {
+			return false;
+		}
+		double desconto = getPrice() * porcentagem;
+		setPrice(getPrice() - desconto);
+		System.out.println("aplicando desconto no LivroFisico");
+		return true;
+	}
+}

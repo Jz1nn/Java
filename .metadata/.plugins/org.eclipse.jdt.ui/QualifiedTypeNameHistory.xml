@@ -7,4 +7,8 @@
     <fullyQualifiedTypeName name="java.lang.Void"/>
     <fullyQualifiedTypeName name="livraria.Autor"/>
     <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="br.com.john.library.products.Book"/>
+    <fullyQualifiedTypeName name="br.com.john.library.products.MiniBook"/>
+    <fullyQualifiedTypeName name="library.ShoppingCart"/>
+    <fullyQualifiedTypeName name="br.com.john.library.products.Ebook"/>
 </qualifiedTypeNameHistroy>

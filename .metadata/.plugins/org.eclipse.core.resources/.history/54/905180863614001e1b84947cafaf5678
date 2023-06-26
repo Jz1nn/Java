@@ -1,0 +1,35 @@
+package br.com.john.library.test;
+
+import br.com.john.library.Author;
+
+public class BookRegistration {
+	public static void main(String[] args) {
+		
+		Author autor = new Author();
+		autor.setName("John Willian");
+		autor.setEmail("john@email.com");
+		autor.setCpf("123.456.789.10");
+
+		Book livro = new PhysicalBook(autor);
+		livro.setName("Java 8 pratico");
+		livro.setDescricao("Novos recursos da linguagem");
+		livro.setPrice(59.90);
+		livro.setIsbn("978-85-66250-46-6");
+
+		livro.mostrarDetalhes();
+
+		
+		Author outroAutor = new Author();
+		outroAutor.setName("Paulo Silveira");
+		outroAutor.setEmail("paulo@email.com");
+		outroAutor.setCpf("123.456.789.10");
+		
+		Book outroLivro = new PhysicalBook(outroAutor);
+		outroLivro.setName("Logica de Programacao");
+		outroLivro.setDescricao("Crie seus primeiros programas");
+		outroLivro.setPrice(59.90);
+		outroLivro.setIsbn("978-85-66250-22-0");
+		
+		outroLivro.mostrarDetalhes();
+	}
+}

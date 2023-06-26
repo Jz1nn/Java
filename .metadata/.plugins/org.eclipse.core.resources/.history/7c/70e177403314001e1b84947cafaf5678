@@ -1,0 +1,6 @@
+package br.com.john.livraria.produtos;
+
+public interface Produto {
+
+	double getValor();
+}

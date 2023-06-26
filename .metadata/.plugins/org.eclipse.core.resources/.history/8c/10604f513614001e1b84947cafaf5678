@@ -1,0 +1,31 @@
+package library;
+
+import br.com.john.library.products.Book;
+import br.com.john.library.products.Product;
+import br.com.john.library.products.Magazine;
+
+public class ShoppingCart {
+	
+	private double total;
+
+	
+	public void adiciona(Book livro) {
+		System.out.println("Adicionando: " + livro);
+		livro.apllyDiscountOf(0.05);
+		total += livro.getValor();
+	}
+	
+	public void adiciona(Magazine revista) {
+		System.out.println("Adicionando: " + revista);;
+		revista.apllyDiscountOf(0.05);
+		total += revista.getValor();
+	}
+	
+	public void adiciona(Product produto) {
+		System.out.println("Adicionando: " + produto);
+		total += produto.getValor();
+	}
+	public double getTotal() {
+		return total;
+	}
+}

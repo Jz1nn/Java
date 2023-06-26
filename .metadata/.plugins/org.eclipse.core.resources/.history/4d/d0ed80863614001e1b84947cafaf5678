@@ -1,0 +1,29 @@
+package br.com.john.library.test;
+
+import br.com.john.library.Author;
+
+public class SalesRecord {
+
+	public static void main(String[] args) {
+		
+		Author autor = new Author();
+		autor.setName("Mauricio Aniche");
+		
+		PhysicalBook fisico = new PhysicalBook(autor);
+		fisico.setName("Test-Driven Development");
+		fisico.setPrice(59.90);
+		
+		
+		Ebook ebook = new Ebook(autor);
+		ebook.setName("Test-Driven Development");
+		ebook.setPrice(29.90);
+		
+		
+		ShoppingCart carrinho = new ShoppingCart();
+		
+		carrinho.adiciona(fisico);
+		carrinho.adiciona(ebook);
+		
+		System.out.println("Total " + carrinho.getTotal());
+	}
+}

@@ -1,0 +1,11 @@
+package br.com.john.library.products;
+
+@FunctionalInterface
+public interface Promotional {
+
+	boolean apllyDiscountOf(double porcentagem);
+	
+	default boolean apllyDiscountOf10Porcento() {
+		return apllyDiscountOf(0.1);
+	}
+}
